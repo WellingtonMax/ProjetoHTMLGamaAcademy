@@ -46,20 +46,23 @@
                 <h5>FullStack Developer</h5>
             </div>
 
-            <div id="arrow">
-                <i class="fas fa-caret-square-down"></i>
+            <div onclick="displayAbout()" id="arrow">
+                <i id="animation" class="fas fa-caret-square-down"></i>
             </div>
-            <div id="about">
+            <div style="display: none;" id="about">
                 <p>
-                    Olá! Meu nome é Wellington Luis, sou um FullStack developer, 
+                    Olá! Meu nome é Wellington Luis, sou um eterno estudante da área back-end e front-end, 
+                    Hard skills: Git, Clean code, GitHub, HTML5, CSS, Java, JavaScript, MySQL, construção de API. 
+                    Soft skills: Adaptabilidade, trabalho em equipe, criatividade, pensamento crítico,
+                    autoconfiança e aprendizagem acelerada. 
                 </p>
             </div>
             <div>
-                <p>deixe seu contato!</p>
+                <p>Deixe seu contato!</p>
             </div>
             <div class="form">
                 <form action="">
-                    <input type="text" placeholder="seu melhor email :)">
+                    <input type="text" placeholder="Seu melhor email :)">
                     <button>enviar!</button>
                 </form>
 
@@ -67,5 +70,13 @@
         </section>        
     </main>
     
+    <script>
+        function displayAbout() {
+            var arrow = document.getElementById('animation');
+            arrow.classList.toggle('rotate');
+            var display = document.getElementById('about');
+            display.classList.toggle('active');
+        }        
+    </script>
 </body>
 </html>

@@ -24,8 +24,10 @@ body {
 header {
     display: flex;
     justify-content: space-around;
-    padding: 15px;
     align-items: center;
+    padding: 15px;
+    /*border-bottom: 2px solid #181818;*/
+    box-shadow: 1px 1px 9px 1px #181818;
 }
 
 header ul {
@@ -36,16 +38,51 @@ header ul li {
     padding: 5px;
 }
 
+header ul li a:hover {
+    transition: 150ms;
+}
+
+header ul li a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
 .container {
     text-align: center;
 }
 
 .container .name h1 {
-    font-size: 60px;
+    font-size: 55px;
 }
 
 .container .name h5 {
-    font-size: 25px;
+    font-size: 22px;
+    padding: 15px;
+}
+
+#arrow {
+    font-size: 30px;
+    cursor: pointer;
+    animation: blink 1s steps(5, start) infinite;
+}
+
+@keyframes blink {
+    to {
+        visibility: hidden;
+    }
+}
+
+#animation {
+    transition: 600ms;
+}
+
+.rotate {
+    transform: rotate(180deg);
+    transition: 600ms;
+}
+
+.active {
+    display: block !important;
 }
 
 #about p {
@@ -54,15 +91,34 @@ header ul li {
 }
 
 .form {
-    width: 40%;
+    width: 35%;
     margin: 0 auto;
+    margin-top: 30px;
 }
 
 .form input {
-    width: 50%;
+    width: 45%;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px 0px 0px 5px;
 }
 
 .form button {
     width: 15%;
+    padding: 5px 10px;
+    background-color: #000000;
+    color: #ffffff;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;  
+    transition: 350ms;
+    border-radius: 0px 5px 5px 0px;
+    margin-top: 15px;
+    margin-left: -5px;
+}
+
+.form button:hover {
+    background-color: #d33100;
+    color: #ffffff;
 }
 
